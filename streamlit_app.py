@@ -5,3 +5,4 @@ streamlit.title('my parents new healthy dinner')
 
 streamlit.header('Breakfast Menu:')
 streamlit.text('Omega3 and blueberry oats')
+streamlit.text('boiled eggs')
