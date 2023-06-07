@@ -55,19 +55,6 @@ try:
 # write your own comment - what does this do?
 #streamlit.dataframe(fruityvice_normalized)
 
-steamlit.stop()
-import snowflake.connector
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT* from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit.header("the fruit load list contains:")
-streamlit.dataframe(my_data_rows)
 
-fruit_choice = streamlit.text_input('What fruit would you like to add?')
-streamlit.write('thanks for adding',fruit_choice)
-
-
-my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
 
 
